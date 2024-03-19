@@ -2,6 +2,10 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import userImage from "../../assets/images/avator.png";
 import logo from "../../assets/images/logo.webp";
+// import { BiAddToQueue } from "react-icons/bi";
+// import { CiMenuBurger } from "react-icons/ci";
+import {BiAddToQueue} from "react-icons/bi"
+import {CiMenuBurger} from "react-icons/ci"
 const navLinks = [
   {
     path: "/home",
@@ -55,18 +59,29 @@ const Header = () => {
           </div>
 
           {/* nav right */}
+
           <div className="flex items-center gap-4">
             <div>
               <Link to="/">
-                <figure className="w-[35px] h-[35px] rounded-full">
-                  <img
-                    src={userImage}
-                    className="w-full rounded-full"
-                    alt="profile"
-                  />
+                <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
+                  <img src={userImage} className="w-full rounded-full" alt="" />
                 </figure>
               </Link>
             </div>
+
+            <Link to="/login">
+              <button className=" bg-primaryColor py-2 px-6 flex items-center justify-center rounded-[50px]">
+                Login
+              </button>
+            </Link>
+            <>
+            <BiAddToQueue />
+        <CiMenuBurger />
+            </>
+
+            <span className="md: hidden">
+          
+            </span>
           </div>
         </div>
       </div>
